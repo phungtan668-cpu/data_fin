@@ -10,7 +10,13 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Ứng dụng Phân Tích Báo Cáo Tài Chính 📊")
+# ĐIỀU CHỈNH TIÊU ĐỀ BẰNG HTML/CSS:
+# Tiêu đề màu đỏ, gạch chân và thêm icon đồng tiền (🪙)
+st.markdown("""
+<h1 style='text-align: center; color: red; text-decoration: underline;'>
+    <span style='margin-right: 10px;'>🪙</span> Ứng dụng Phân Tích Báo Cáo Tài Chính
+</h1>
+""", unsafe_allow_html=True)
 
 # ************************* KHỞI TẠO SESSION STATE VÀ CHAT HISTORY *************************
 if "chat_history" not in st.session_state:
